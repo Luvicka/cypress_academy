@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/Luvicka/cypress_academy#readme",
   "devDependencies": {
-    "@faker-js/faker": "^9.5.0",
+
+        "@cypress/xpath": "^2.0.3",
     "cypress": "^14.0.3"
   }
 }
