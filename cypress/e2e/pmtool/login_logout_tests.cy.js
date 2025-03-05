@@ -1,5 +1,5 @@
-import { DashboardPage } from "../../page_objects/pmtool/dashboard_page";
-import { LoginPage } from "../../page_objects/pmtool/login_page";
+import { DashboardPage } from "../../page-objects/pmtool/dashboard_page";
+import { LoginPage } from "../../page-objects/pmtool/login_page";
 
 describe('Login and Logout Tests', () => {
     it('Login to pmatool', () => {
