@@ -1,19 +1,24 @@
+import { HeaderSection } from "./common/header_section";
 import { LoginPage } from "./login_page";
 
-export class DashboardPage{
+export class DashboardPage extends HeaderSection{
 constructor(){
-    this.profilSection="#user_dropdown";
-    this.logOut="#logout";
+    super();
+    this.profileButton = "#user_dropdown";
+    this.logoutButton = "#logout";
     this.welcomePageHeader = "#welcome-page-header";
     cy.get(this.welcomePageHeader).should("be.visible");
 }
-clickProfilSection(){
-    cy.get(this.profilSection).click();
-    return this;
-}
 
-clickLogout(){
-    cy.get(this.logOut).click();
+
+clickProfile() {
+    cy.get(this.profileButton).click();
+    return this;
+  }
+
+  clickLogout() {
+    cy.get(this.logoutButton).click();
     return new LoginPage();
-}
+  }
+
 }

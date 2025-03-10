@@ -67,8 +67,4 @@ describe("Chai Tests (Tests assertions)", () => {
     it("Alert not exist after Pmtool opened", () => {
         cy.get(".alert.alert-danger").should("not.exist");
     });
-
-    it(, () => {
-        
-    });
 });
