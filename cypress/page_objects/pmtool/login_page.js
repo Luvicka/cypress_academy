@@ -10,6 +10,7 @@ export class LoginPage{
         this.loginButton="[type='submit']";//cy.get('.btn')//submit  "[type='.btn']"
         this.lostPasswordAnchor = "#forget_password";
         this.pageHeader = ".form-title";
+        this.rememberMe = ".checkbox";
     }
     openPmtool(){
         cy.visit(this.pmtoolUrl);
@@ -47,4 +48,29 @@ export class LoginPage{
         cy.get(this.pageHeader).should("have.text", headerText);
         return this;
     }
+
+    usernameHasPlaceholder(usernamePlaceholder){
+        cy.get(this.usernameInput).should("have.attr","placeholder",usernamePlaceholder);
+        return this;
+    }
+
+    passwordHasPlaceholder(passwordPlaceholder){
+        cy.get(this.passwordInput).should("have.attr","placeholder",passwordPlaceholder);
+        return this;
+    }
+
+     rememberMeContainText(rememberMeText){
+        cy.get(this.rememberMe).should("contain",rememberMeText);
+        return this;
+    }
+    
+    loginButtonHasText(loginText){
+        cy.get(this.loginButton).should("have.text",loginText);
+        return this;
+    }
+
+    passwordForgottenContainText(passwordForgottenText){
+        cy.get(this.lostPasswordAnchor).should("contain",passwordForgottenText);
+        return this;
+    }  
 }
