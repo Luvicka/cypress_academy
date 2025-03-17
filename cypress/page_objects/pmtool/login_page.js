@@ -10,6 +10,8 @@ export class LoginPage{
         this.loginButton="[type='submit']";//cy.get('.btn')//submit  "[type='.btn']"
         this.lostPasswordAnchor = "#forget_password";
         this.pageHeader = ".form-title";
+        this.logoImg = ".login-page-logo img";
+        this.alertDiv = ".alert.alert-danger";
     }
     openPmtool(){
         cy.visit(this.pmtoolUrl);
@@ -47,4 +49,48 @@ export class LoginPage{
         cy.get(this.pageHeader).should("have.text", headerText);
         return this;
     }
+
+    usernameIsVisible() {
+    cy.get(this.usernameInput).should("be.visible");
+    return this;
+  }
+
+  usernameHavePlaceholder(placeholder) {
+    cy.get(this.usernameInput).should("have.attr", "placeholder", placeholder);
+    return this;
+  }
+
+  usernameHaveValue(value) {
+    cy.get(this.usernameInput).should("have.value", value);
+    return this;
+  }
+
+  passwordIsVisible() {
+    cy.get(this.passwordInput).should("be.visible");
+    return this;
+  }
+
+  passwordHasPlaceholder(placeholder) {
+    cy.get(this.passwordInput).should("have.attr", "placeholder", placeholder);
+    return this;
+  }
+
+  logoIsVisible() {
+    cy.get(this.logoImg).should("be.visible");
+    re
+  }
+
+  alertIsVisible(){
+    cy.get(this.alertDiv).should("be.visible");
+    return this
+  }
+
+  alertHasText(alertText) {
+    cy.get(this.alertDiv).should(
+      "contain.text",
+      "No match for Username and/or Password."
+    );
+    return this;
+  }
+
 }
