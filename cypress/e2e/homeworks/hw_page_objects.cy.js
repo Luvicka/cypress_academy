@@ -2,7 +2,7 @@ import { HomePage } from "../../page-objects/eshop/home_page";
 import { RegistrationPage } from "../../page-objects/eshop/registration_page";
 
 describe('Eshop registration test', () => {
-  it.skip('Eshop registration test', () => {
+  it('Eshop registration test', () => {
     const eshop = new HomePage();
     const registrationForm = new RegistrationPage
     eshop.openEshop();
