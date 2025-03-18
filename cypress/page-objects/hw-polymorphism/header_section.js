@@ -1,3 +1,5 @@
+import { ProductPage } from "./product_page";
+
 export class HeaderSectionEshop {
     constructor() {
         this.logo = "#logo > a > .img-responsive";
@@ -5,6 +7,6 @@ export class HeaderSectionEshop {
     
     returnToMainPage() {
         cy.get(this.logo).click();
-        return this;
+        return new ProductPage();
     }
 }

@@ -5,6 +5,6 @@ describe("HW Polymorphism Test Iphone Product", () => {
         new ProductPage().openEshop()
         .openProductIphoneDetail()
         .productIphoneHasDescription()
-        .returnToMainPage();      
+        .returnToMainPage();     
     }); 
 });
