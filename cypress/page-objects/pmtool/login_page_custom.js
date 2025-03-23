@@ -2,7 +2,7 @@ import { DashboardPage } from "./dashboard_page";
 import { LostPasswordPage } from "./lost_password_page";
 
 //login_page.js
-export class LoginPage{
+export class LoginPageCustom{
     constructor(){
         this.pmtoolUrl="https://tredgate.com/pmtool";
            this.usernameInput = customElement("#username");

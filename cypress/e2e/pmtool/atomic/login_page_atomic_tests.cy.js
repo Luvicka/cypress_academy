@@ -1,8 +1,9 @@
-import { LoginPage } from "../../../page_objects/pmtool/login_page";
+import { LoginPage } from "../../../page-objects/pmtool/login_page";
+
 
 describe("Login Page Atomic Tests", () => {
   beforeEach(() => {
-    new LoginPage().openPmtool();
+    new LoginPage.openPmtool();
   });
 
   context("Username Input Tests", () => {
