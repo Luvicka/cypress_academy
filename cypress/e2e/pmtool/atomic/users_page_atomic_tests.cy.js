@@ -1,5 +1,5 @@
-import { LoginPage } from "../../../page_objects/pmtool/login_page";
-import { UsersPage } from "../../../page_objects/pmtool/users_page";
+import { LoginPage } from "../../../page-objects/pmtool/login_page";
+import { UsersPage } from "../../../page-objects/pmtool/users_page";
 
 describe("Users Page Atomic Tests", () => {
    beforeEach(() => {
