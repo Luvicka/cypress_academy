@@ -14,7 +14,7 @@ export class ProjectsPage extends HeaderSection {
 
     clickAddProject() {
         this.addProjectButton.click();
-        cy.get(this.addProjectButton).click();
-        return new CreateNewProjectModal;
+       // cy.get(this.addProjectButton).click();
+        return new CreateNewProjectModal();
     }
 }

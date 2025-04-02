@@ -1,3 +1,4 @@
+import { customElement } from "../../helpers/custom_element";
 import { DashboardPage } from "./dashboard_page";
 import { LostPasswordPage } from "./lost_password_page";
 
